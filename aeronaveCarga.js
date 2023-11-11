@@ -1,0 +1,3 @@
+class aeronaveCarga extends aeronaveComercial {
+
+}
