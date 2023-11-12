@@ -1,4 +1,4 @@
-class aeronave {
+export default class aeronave {
     prefixo;
     velocidadeCruzeiro;
     autonomia;

@@ -1,4 +1,4 @@
-class Aerovias {
+export default class Aerovias {
     #identificador;
     #aeroportoOrigem;
     #aeroportoDestino;

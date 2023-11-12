@@ -13,6 +13,10 @@ export default class Piloto {
         return this.#matricula;
     }
 
+    get nome(){
+        return this.nome;
+    }
+
     get habilitacaoAtiva(){
         return this.#habilitacaoAtiva;
     }

@@ -1,21 +1,25 @@
-import Piloto from "./piloto";
+import piloto from "./piloto.js";
 
-const piloto1 = new piloto(123, "Lucao", true);
-const piloto2 = new piloto(124, "Lucas", false);
-const piloto3 = new piloto(125, "Luquinha", true);
-
-let arrayPilotos = [piloto1, piloto2, piloto3];
-
-class servicoPilotos {
+export default class servicoPilotos {
     recupera(matricula) {
-        for (let i = 0; i < arrayPilotos.length; i++){
-            if (arrayPilotos[i].matricula == matricula) {
-                return
-            }
+        this.instaciaPiloto();
+        for (let i=0; i<this.arrayPilotos.length; i++) {
+            if (matricula == this.arrayPilotos[i].matricula) {
+                return `A matricula ${matricula} é do piloto: ${this.arrayPilotos[i].nome}. Está apto a voar: ${this.arrayPilotos[i].habilitacaoAtiva ? 'Sim' : 'Não'}`;   
+            } 
+          
         }
     }
 
     todos(){
-        return arrayPilotos;
+        return this.arrayPilotos;
+    }
+
+    instaciaPiloto(){
+        const piloto1 = new piloto("123123123", "Messi", true);
+        const piloto2 = new piloto("124124124", "Neymar", false);
+        const piloto3 = new piloto("125125125", "Mbappe", true);
+        
+       this.arrayPilotos = [piloto1, piloto2, piloto3];
     }
 }
