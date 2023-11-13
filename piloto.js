@@ -20,8 +20,4 @@ export default class Piloto {
     get habilitacaoAtiva(){
         return this.#habilitacaoAtiva;
     }
-
-    algumacoisa() {
-        console.log("oi")
-    }
 }
