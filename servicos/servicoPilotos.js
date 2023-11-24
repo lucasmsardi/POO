@@ -1,4 +1,4 @@
-import piloto from "./piloto.js";
+import piloto from "../pilotos/piloto.js";
 
 export default class servicoPilotos {
     recupera(matricula) {

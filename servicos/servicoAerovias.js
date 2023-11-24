@@ -1,4 +1,4 @@
-import Aerovias from "./aerovias.js";
+import Aerovias from "../aerovias/aerovias.js";
 
 export default class servicoAerovias {
     recupera(origem, destino){

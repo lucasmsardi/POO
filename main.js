@@ -1,6 +1,6 @@
-import servicoAeronaves from './servicoAeronaves.js'
-import servicoAerovias from './servicoAerovias.js'
-import servicoPilotos from './servicoPilotos.js'
+import servicoAeronaves from './servicos/servicoAeronaves.js'
+import servicoAerovias from './servicos/servicoAerovias.js'
+import servicoPilotos from './servicos/servicoPilotos.js'
 
 const servicoP = new servicoPilotos
 const servicoA = new servicoAerovias 

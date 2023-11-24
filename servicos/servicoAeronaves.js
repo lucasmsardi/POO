@@ -1,8 +1,8 @@
-import aeronave from "./aeronave.js";
-import aeronaveCarga from "./aeronaveCarga.js"
-import aeronaveComercial from "./aeronaveComercial.js";
-import aeronaveParticular from "./aeronaveParticular.js"
-import aeronavePassageiros from "./aeronavePassageiros.js"
+import aeronave from "../aeronaves/aeronave.js";
+import aeronaveCarga from "../aeronaves/aeronaveCarga.js"
+import aeronaveComercial from "../aeronaves/aeronaveComercial.js";
+import aeronaveParticular from "../aeronaves/aeronaveParticular.js"
+import aeronavePassageiros from "../aeronaves/aeronavePassageiros.js"
 export default class servicoAeronaves {
     todas(){
         this.instanciaAeronaves();
