@@ -1,4 +1,4 @@
-export default class Aerovias {
+export default class Aerovia {
     #identificador;
     #aeroportoOrigem;
     #aeroportoDestino;
@@ -25,5 +25,9 @@ export default class Aerovias {
 
     get tamanhoAerovia(){
         return this.#tamanhoAerovia;
+    }
+
+    toString() {
+        return this.identificador + ', ' + this.aeroportoOrigem + ', ' + this.aeroportoDestino + ', ' + this.tamanhoAerovia
     }
 }
