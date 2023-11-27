@@ -3,13 +3,13 @@ import servicoAerovias from './servicos/servicoAerovias.js'
 import servicoPilotos from './servicos/servicoPilotos.js'
 import prompt from 'prompt-sync';
 
-
 class Menu {
     listarAerovias(){ 
         servicoA.printarTodasAerovias();
     }
 
-    listarAltitudesLivres() { 
+    listarAltitudesLivres(idAerovia, data) { 
+        ocupacaoAerovia.altitudesOcupadas(idAerovia, data);
     }
 
     aprovarPlanoDeVoo() {}
@@ -45,6 +45,8 @@ class Menu {
                     this.listarAerovias();
                     break;
                 case "2":
+                    let idAeroviaMenu = input("Digite o id da aerovia: ")
+                    let dataMenu = input("Insira a data: ")
                     this.listarAltitudesLivres();
                     break;
                 case "3":
@@ -70,25 +72,7 @@ class Menu {
 
 }
 
-// const data = new Date("November 25, 2023 10:05:00 UTC-03:00")
-// const data2 = new Date("November 25, 2023 09:05:00 UTC-03:00")
-
-
-// if (data > data2) {
-//     console.log('ola')
-// }
-
-
-const servicoP = new servicoPilotos
-const servicoA = new servicoAerovias 
-const servicoAN = new servicoAeronaves
+const servicoA = new servicoAerovias;
 
 const menu = new Menu();
 menu.exibirMenu();
-
-// console.log(servicoP.recupera("123123123"))
-// console.log(servicoP.recupera("124124124"))
-// console.log(servicoP.recupera("125125125"))
-// console.log(servicoA.recupera("POA", "FLO"))
-
-//servicoAN.todas()
