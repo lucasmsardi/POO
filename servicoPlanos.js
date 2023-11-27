@@ -1,0 +1,9 @@
+class servicoPlanos {
+    consiste() {
+
+    }
+
+    recupera() {
+        
+    }
+}
