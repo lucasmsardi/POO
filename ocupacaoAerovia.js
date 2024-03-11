@@ -34,7 +34,7 @@ class ocupacaoAerovia {
     }
 
     ocupa(idAerovia) {
-
+        
     }
 
     libera(idAerovia) {

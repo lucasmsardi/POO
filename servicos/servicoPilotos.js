@@ -1,4 +1,5 @@
 import piloto from "../pilotos/piloto.js";
+import fs from 'fs';
 
 export default class servicoPilotos {
     recupera(matricula) {
@@ -21,5 +22,9 @@ export default class servicoPilotos {
         const piloto3 = new piloto("125125125", "Mbappe", true);
         
        this.arrayPilotos = [piloto1, piloto2, piloto3];
-    }
+
+      const jsonString = JSON.stringify(pilotosArray);
+       const filePath = "dados.txt";
+       fs.writeFileSync(filePath, jsonString);
+    } 
 }

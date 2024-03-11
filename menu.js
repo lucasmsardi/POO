@@ -2,6 +2,8 @@ import servicoAeronaves from './servicos/servicoAeronaves.js'
 import servicoAerovias from './servicos/servicoAerovias.js'
 import servicoPilotos from './servicos/servicoPilotos.js'
 import prompt from 'prompt-sync';
+import fs from 'fs';
+import { log } from 'console';
 
 class Menu {
     listarAerovias(){ 
@@ -76,3 +78,13 @@ const servicoA = new servicoAerovias;
 
 const menu = new Menu();
 menu.exibirMenu();
+
+const dadosArquivo = 
+
+fs.writeFile("dados.txt", dadosArquivo, (err) => {
+    if (err) {
+        console.error('Erro escrevendo o arquivo', err);
+        return;
+    }
+    console.log('Texto foi escrito ao arquivo');
+})
